@@ -11,6 +11,32 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', "myController@index");
+
+Route::get('/contact-us', "myController@contact_us");
+
+Route::get('/login', "myController@index");
+
+Route::get('/logout', "myController@index");
+
+Route::get('/products', "myController@index");
+
+Route::get('/products/category', "myController@index");
+
+Route::get('/products/brands', "myController@index");
+
+Route::get('/products/details/{id}', "myController@index");
+
+Route::get('/blog', "myController@index");
+
+Route::get('/blog/post/{id}', "myController@index");
+
+Route::get('/search/{key-word}', "myController@index");
+
+Route::get('/cart', "myController@index");
+
+Route::get('/checkout', "myController@index");
