@@ -13,7 +13,8 @@ class myResourceController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return "myResourceController - index()~~";
+//        return "myResourceController - index()~~";
+          return view("myView",["from_server" => "hello~"]);
     }
 
     /**
