@@ -17,6 +17,16 @@ class myResourceController extends Controller {
           return view("home");
 //          return view("myView",["from_server" => "hello~"]);
     }
+    
+//    public function index()
+//    {
+//        return "首頁";
+//    }
+//
+//    public function contact_us()
+//    {
+//        return "聯絡我們";
+//    }
 
     /**
      * Show the form for creating a new resource.
