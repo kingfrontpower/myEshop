@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Home | E-Shopper</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{("css/bootstrap.min.css")}}" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/prettyPhoto.css" rel="stylesheet">
         <link href="css/price-range.css" rel="stylesheet">
@@ -293,7 +293,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="row">
-                        <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+                        <p class="pull-left">Copyright © {{date("Y")}} E-SHOPPER Inc. All rights reserved.</p>
                         <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
                     </div>
                 </div>
