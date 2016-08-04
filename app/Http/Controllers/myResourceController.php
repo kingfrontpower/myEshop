@@ -14,7 +14,8 @@ class myResourceController extends Controller {
      */
     public function index() {
 //        return "myResourceController - index()~~";
-          return view("myView",["from_server" => "hello~"]);
+          return view("home");
+//          return view("myView",["from_server" => "hello~"]);
     }
 
     /**
@@ -42,10 +43,10 @@ class myResourceController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($name_from_client) {
-
-        return view("welcome", ["name_from_server" => $name_from_client]);
-    }
+//    public function show($name_from_client) {
+//
+//        return view("welcome", ["name_from_server" => $name_from_client]);
+//    }
 
     /**
      * Show the form for editing the specified resource.
