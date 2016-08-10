@@ -14,16 +14,16 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //}
+
+Route::get('/blog', "myController@blog");
+Route::get('/blogSingle', "myController@blogSingle");
+Route::get('/cart', "myController@cart");
+Route::get('/checkOut', "myController@checkOut");
+Route::get('/contactUs', "myController@contactUs");
 Route::get("/","myController@index");
-Route::get('/product', "myController@product");
-Route::get('/contact_us', "myController@contact_us");
-Route::get("/show/{name}","myResourceController@show");
-
-
-//Route::get('/login', "myController@index");
-//
-//Route::get('/logout', "myController@index");
-//
+Route::get('/login', "myController@login");
+Route::get('/productDetails', "myController@productDetails");
+Route::get('/shop', "myController@shop");
 
 //Route::get('/products/category', "myController@index");
 //
@@ -40,3 +40,5 @@ Route::get("/show/{name}","myResourceController@show");
 //Route::get('/cart', "myController@index");
 //
 //Route::get('/checkout', "myController@index");
+
+//Route::get("/show/{name}","myResourceController@show");

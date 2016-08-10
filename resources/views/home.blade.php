@@ -1,7 +1,5 @@
 @extends("layouts.main")
 @section("content_1")
-</header><!--/header-->
-
 <section id="slider"><!--slider-->
     <div class="container">
         <div class="row">
