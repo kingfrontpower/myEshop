@@ -21,7 +21,7 @@ Route::get('/cart', "myController@cart");
 Route::get('/checkOut', "myController@checkOut");
 Route::get('/contactUs', "myController@contactUs");
 Route::get("/","myController@index");
-Route::get('/login', "myController@login");
+Route::get('/logIn', "myController@logIn");
 Route::get('/productDetails', "myController@productDetails");
 Route::get('/shop', "myController@shop");
 

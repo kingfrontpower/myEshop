@@ -89,24 +89,24 @@
                             </div>
                             <div class="mainmenu pull-left">
                                 <ul class="nav navbar-nav collapse navbar-collapse">
-                                    <li><a href="{{url("/")}}" class="active">Home</a></li>
-                                    <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="{{url("/")}}" {{ $title == "Home" ? "class=active" : " "}}>Home</a></li>
+                                    <li class="dropdown"><a href="{{url("/shop")}}" {{ $title == "Shop" ? "class=active" : " "}}>Shop<i class="fa fa-angle-down"></i></a>
                                         <ul role="menu" class="sub-menu">
-                                            <li><a href="{{url("/shop")}}">Products</a></li>
-                                            <li><a href="{{url("/productDetails")}}">Product Details</a></li> 
-                                            <li><a href="{{url("/checkOut")}}">Checkout</a></li> 
-                                            <li><a href="{{url("/cart")}}">Cart</a></li> 
-                                            <li><a href="{{url("/logIn")}}">Login</a></li> 
+                                            <li><a href="{{url("/shop")}}" {{ $title == "Shop" ? "class=active" : " "}}>Products</a></li>
+                                            <li><a href="{{url("/productDetails")}}" {{ $title == "Product-Details" ? "class=active" : " "}}>Product Details</a></li> 
+                                            <li><a href="{{url("/checkOut")}}" {{ $title == "Check-Out" ? "class=active" : " "}}>Checkout</a></li> 
+                                            <li><a href="{{url("/cart")}}" {{ $title == "Cart" ? "class=active" : " "}}>Cart</a></li> 
+                                            <li><a href="{{url("/logIn")}}" {{ $title == "Log-In" ? "class=active" : " "}}>Login</a></li> 
                                         </ul>
                                     </li> 
-                                    <li class="dropdown"><a href="{{url("/blog")}}">Blog<i class="fa fa-angle-down"></i></a>
+                                    <li class="dropdown"><a href="{{url("/blog")}}" {{ ($title == "Blog" ) ? "class=active" : " "}}>Blog<i class="fa fa-angle-down"></i></a>
                                         <ul role="menu" class="sub-menu">
-                                            <li><a href="{{url("/blog")}}">Blog List</a></li>
-                                            <li><a href="{{url("/blogSingle")}}">Blog Single</a></li>
+                                            <li><a href="{{url("/blog")}}"{{ $title == "/Blog" ? "class=active" : " "}}>Blog List</a></li>
+                                            <li><a href="{{url("/blogSingle")}}" {{ $title == "Blog-single" ? "class=active" : " "}}>Blog Single</a></li>
                                         </ul>
                                     </li> 
 <!--                                    <li><a href="404.html">404</a></li>-->
-                                    <li><a href="{{url("contact_us")}}">Contact</a></li>
+                                    <li><a href="{{url("/contactUs")}}"  {{ $title == "Contact-Us" ? "class=active" : " "}}>Contact</a></li>
                                 </ul>
                             </div>
                         </div>

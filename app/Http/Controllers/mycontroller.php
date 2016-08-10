@@ -12,9 +12,9 @@ class mycontroller extends Controller {
         return view("blog", ["title" => "Blog"]);
     }
     
-    public function blogSigle() {
+    public function blogSingle() {
 //        return "部落格-單頁";
-        return view("blogSigle", ["title" => "Blog-Sigle"]);
+        return view("blogSingle", ["title" => "Blog-Sigle"]);
     }
 
     public function contactUs() {
@@ -38,7 +38,7 @@ class mycontroller extends Controller {
 
     public function logIn() {
 //        return "登入";
-        return view("logIn", ["title" => "log-In"]);
+        return view("logIn", ["title" => "Log-In"]);
     }
 
     public function productDetails() {
