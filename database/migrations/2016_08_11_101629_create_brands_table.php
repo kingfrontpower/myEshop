@@ -13,11 +13,12 @@ class CreateBrandsTable extends Migration
     public function up()
     {
         Schema::create('brands', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string("name",60);
+                        $table->increments('id');
+            $table->string("name")->unique();
+            $table->string("created_at_ip");
+            $table->string("updated_at_ip");
             $table->timestamps();
-            $table->string('created_at_ip');
-            $table->string('updated_at_ip');
+
         });
     }
 

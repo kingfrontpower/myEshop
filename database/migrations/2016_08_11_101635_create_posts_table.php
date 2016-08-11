@@ -13,14 +13,14 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string("link")->unique();
-            $table->string("tetle",60);
-            $table->string("detail");
-            $table->string("article");
-            $table->timestamps();
+                       $table->increments('id');
+            $table->string('url')->unique();
+            $table->string('title', 60);
+            $table->string('description');
+            $table->text('content');
             $table->string('created_at_ip');
             $table->string('updated_at_ip');
+            $table->timestamps();
         });
     }
 

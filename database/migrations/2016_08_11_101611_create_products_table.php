@@ -13,16 +13,17 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->increments('id');
-             $table->string("name",60)->unique();
-            $table->string("tetle",60);
-            $table->string("detail");
+                  
+            $table->string("name", 60)->unique();
+            $table->string("title", 60);
+            $table->string("description");
             $table->integer("price");
-            $table->unsignedInteger("Categories ID");
-            $table->unsignedInteger("Brands ID");
-            $table->string('created_at_ip');
-            $table->string('updated_at_ip');
+            $table->unsignedInteger("category_id");
+            $table->unsignedInteger("brand_id");
+            $table->string("created_at_ip");
+            $table->string("updated_at_ip");
             $table->timestamps();
+
         });
     }
 

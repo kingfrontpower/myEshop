@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CategoriesTableSeeder extends Seeder
+class BrandsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,10 +12,10 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create("zh_TW");
-        $name = ["褲子", "上衣", "帽子"];
+        $name = ["Nike", "Adidas", "htc"];
 
         for($i = 0; $i < 3; $i++) {
-            DB::table("categories")->insert([
+            DB::table("brands")->insert([
                 "name" => $name[$i],
                 "created_at_ip" => $faker->ipv4,
                 "updated_at_ip" => $faker->ipv4,
