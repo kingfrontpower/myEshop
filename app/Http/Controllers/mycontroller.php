@@ -33,6 +33,9 @@ class mycontroller extends Controller {
     }
 
     public function index() {
+//        $product = new \App\Product();
+//        $product->name = "testhello2~~";
+//        $product->save
         return view("home", ["title" => "Home"]);
     }
 
