@@ -7,11 +7,21 @@ use App\Http\Requests;
 
 class mycontroller extends Controller {
 
+    var $products;
+    var $categories;
+    var $brands;
+
+    public function __construct() {
+        $this->products = \App\Product::all(["id", "name", "price"]);
+        $this->categories = \App\Category::all(["name"]);
+        $this->brands = \App\Brand::all(["name"]);
+    }
+
     public function blog() {
 //        return "部落格";
         return view("blog", ["title" => "Blog"]);
     }
-    
+
     public function blogSingle() {
 //        return "部落格-單頁";
         return view("blogSingle", ["title" => "Blog-Sigle"]);
@@ -34,9 +44,10 @@ class mycontroller extends Controller {
 
     public function index() {
 //        $product = new \App\Product();
-//        $product->name = "testhello2~~";
-//        $product->save
-        return view("home", ["title" => "Home"]);
+//        $product->name = "testhello3~~";
+//        $product->save();
+//        return view("home", ["title" => "Home"]);
+        return view("home", ["title" => "Home", "products" => $this->products, "categories" => $this->categories, "brands" => $this->brands]);
     }
 
     public function logIn() {

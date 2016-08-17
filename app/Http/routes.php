@@ -25,6 +25,21 @@ Route::get('/logIn', "myController@logIn");
 Route::get('/productDetails', "myController@productDetails");
 Route::get('/shop', "myController@shop");
 
+Route::get('/test/write2', function () {
+    $product = new \App\Category();
+//    $product->name = "test";
+//    $product->title = "";
+//    $product->description = "";
+//    $product->price = "";
+//    $product->category_id = "";
+//    $product->brand_id = "";
+//    $product->created_at_ip = "";
+//    $product->updated_at_ip = "";
+//    $product->save();
+
+    $product->create(["name" => "batch-asign1"]);
+});
+
 Route::get('/test/write', function () {
     $product = new \App\Product();
 //    $product->name = "test";
