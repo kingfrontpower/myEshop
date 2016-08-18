@@ -40,3 +40,7 @@ Route::get('/search/{key_word}', "myController@search");
 Route::get('/cart', "myController@cart");
 
 Route::get('/checkout', "myController@checkout");
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
