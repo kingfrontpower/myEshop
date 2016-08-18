@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+        <meta name="description" content="{{$description}}">
         <meta name="author" content="">
         <title>{{$title}} | E-Shopper</title>
         <link href="{{asset("css/bootstrap.min.css")}}" rel="stylesheet">
@@ -66,7 +66,7 @@
                                     <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                                     <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                     <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                    <li><a href="{{url("cart")}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                     <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
                                 </ul>
                             </div>
@@ -90,20 +90,22 @@
                             <div class="mainmenu pull-left">
                                 <ul class="nav navbar-nav collapse navbar-collapse">
                                     <li><a href="{{url("/")}}" {{ $title == "Home" ? "class=active" : " "}}>Home</a></li>
-                                    <li class="dropdown"><a href="{{url("/shop")}}" {{ $title == "Shop" ? "class=active" : " "}}>Shop<i class="fa fa-angle-down"></i></a>
-                                        <ul role="menu" class="sub-menu">
+                                    <li class="dropdown"><a href="{{url("/shop")}}" {{ $title == "Shop" ? "class=active" : " "}}>Shop</a>
+<!--                                        <ul role="menu" class="sub-menu">
                                             <li><a href="{{url("/shop")}}" {{ $title == "Shop" ? "class=active" : " "}}>Products</a></li>
                                             <li><a href="{{url("/productDetails")}}" {{ $title == "Product-Details" ? "class=active" : " "}}>Product Details</a></li> 
                                             <li><a href="{{url("/checkOut")}}" {{ $title == "Check-Out" ? "class=active" : " "}}>Checkout</a></li> 
                                             <li><a href="{{url("/cart")}}" {{ $title == "Cart" ? "class=active" : " "}}>Cart</a></li> 
                                             <li><a href="{{url("/logIn")}}" {{ $title == "Log-In" ? "class=active" : " "}}>Login</a></li> 
-                                        </ul>
+                                        </ul>-->
                                     </li> 
-                                    <li class="dropdown"><a href="{{url("/blog")}}" {{ ($title == "Blog" ) ? "class=active" : " "}}>Blog<i class="fa fa-angle-down"></i></a>
-                                        <ul role="menu" class="sub-menu">
+                                    <!--<li class="dropdown"><a href="{{url("/blog")}}" {{ ($title == "Blog" ) ? "class=active" : " "}}>Blog<i class="fa fa-angle-down"></i></a>-->
+                                    <li class="dropdown"><a href="{{url("/blog")}}" {{ ($title == "Blog" ) ? "class=active" : " "}}>Blog</a>
+
+<!--                                        <ul role="menu" class="sub-menu">
                                             <li><a href="{{url("/blog")}}"{{ $title == "/Blog" ? "class=active" : " "}}>Blog List</a></li>
                                             <li><a href="{{url("/blogSingle")}}" {{ $title == "Blog-single" ? "class=active" : " "}}>Blog Single</a></li>
-                                        </ul>
+                                        </ul>-->
                                     </li> 
 <!--                                    <li><a href="404.html">404</a></li>-->
                                     <li><a href="{{url("/contactUs")}}"  {{ $title == "Contact-Us" ? "class=active" : " "}}>Contact</a></li>
