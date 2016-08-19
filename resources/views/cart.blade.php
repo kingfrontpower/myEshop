@@ -119,7 +119,7 @@
         <div class="col-sm-6">
             <div class="total_area">
                 <ul>
-                    <li>Cart Sub Total <span>$59</span></li>
+                    <li>Cart Sub Total <span>  XXX </span></li>
                     <li>Eco Tax <span>{{Cart::tax()}}</span></li>
                     <li>Shipping Cost <span>Free</span></li>
                     <li>Total <span>{{Cart::total()}}</span></li>
