@@ -18,16 +18,22 @@
 Route::get('/blog', "myController@blog");
 Route::get('/blogSingle', "myController@blogSingle");
 
-Route::get('/checkOut', "myController@checkOut");
+Route::get('/checkout', ["middleware" => "auth", "uses" => "myController@checkout"]);
 Route::get('/contactUs', "myController@contactUs");
 Route::get("/", "myController@index");
-Route::get('/logIn', "myController@logIn");
+Route::get('/login', "myController@login");
 Route::get('/productDetails', "myController@productDetails");
 Route::get('/shop', "myController@shop");
 
 Route::get('/cart', "myController@cart");
 Route::post("/cart", "myController@cart");
 Route::get("/clear_cart","myController@clear_cart");
+
+Route::post("/register", "myController@register");
+Route::post("/auth/login", "myController@auth_login");
+Route::get("/auth/logout", "myController@auth_logout");
+
+
 //Route::post("/cart/add", "myController@cart_add");
 
 //Route::get('/test/write2', function () {

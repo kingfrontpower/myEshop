@@ -12,6 +12,7 @@ use ShoppingCart;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Request;
 use Illuminate\Support\Facades\Redirect;
+use Auth;
 
 class mycontroller extends Controller {
 
@@ -65,29 +66,30 @@ class mycontroller extends Controller {
                     });
             Cart::update($items->first()->rowId, $items->first()->qty - 1);
         }
-        
-         if( Request::get("product_id") && (Request::get("clear") == 1))
-        {
-            $items = Cart::Search(function ($cartItem, $rowId) { return $cartItem->id == Request::get("product_id");});
+
+        if (Request::get("product_id") && (Request::get("clear") == 1)) {
+            $items = Cart::Search(function ($cartItem, $rowId) {
+                        return $cartItem->id == Request::get("product_id");
+                    });
             Cart::remove($items->first()->rowId);
         }
 
-        
+
 
         $cart = Cart::content();
 
         return view("cart", ["title" => "Cart", "description" => "網頁說明", "cart" => $cart]);
     }
-    
+
     public function clear_cart() {
-            Cart::destroy();
+        Cart::destroy();
 
-            return Redirect::to("cart");
-        }
+        return Redirect::to("cart");
+    }
 
-    public function checkOut() {
+    public function checkout() {
 //        return "聯絡我們";
-        return view("checkOut", ["title" => "Check-Out", "description" => "網頁說明"]);
+        return view("checkout", ["title" => "Check-Out", "description" => "網頁說明"]);
     }
 
     public function index() {
@@ -98,9 +100,9 @@ class mycontroller extends Controller {
         return view("home", ["title" => "home", "description" => "網頁說明", "products" => $this->products, "categories" => $this->categories, "brands" => $this->brands]);
     }
 
-    public function logIn() {
+    public function login() {
 //        return "登入";
-        return view("logIn", ["title" => "Log-In"]);
+        return view("login", ["title" => "Log-In", "description" => "網頁說明", "products" => $this->products, "categories" => $this->categories, "brands" => $this->brands]);
     }
 
     public function productDetails() {
@@ -111,6 +113,32 @@ class mycontroller extends Controller {
     public function shop() {
 //        return "商品";
         return view("shop", ["title" => "Shop", "description" => "網頁說明", "products" => $this->products, "categories" => $this->categories, "brands" => $this->brands]);
+    }
+
+    public function register() {
+        if (Request::isMethod('post')) {
+            \App\User::create([
+                'name' => Request::get('name'),
+                'email' => Request::get('email'),
+                'password' => bcrypt(Request::get('password')),
+            ]);
+        }
+
+        return redirect()->to('login');
+    }
+
+    public function auth_login() {
+        if (Auth::attempt(["email" => Request::get("email"), "password" => Request::get("password")])) {
+            return redirect()->to("/");
+        } else {
+            return redirect()->to("/login");
+        }
+    }
+
+    public function auth_logout() {
+        Auth::logout();
+
+        return redirect()->to("/");
     }
 
 //        public function cart_add(Request $request)
