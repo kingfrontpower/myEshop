@@ -13,6 +13,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 use Request;
 use Illuminate\Support\Facades\Redirect;
 use Auth;
+use Socialite;
 
 class mycontroller extends Controller {
 
@@ -140,6 +141,17 @@ class mycontroller extends Controller {
 
         return redirect()->to("/");
     }
+    
+     public function fb_redirect()
+    {
+        return Socialite::driver("facebook")->redirect();
+    }
+
+    public function fb_callback()
+    {
+        return "我回來了";
+    }
+
 
 //        public function cart_add(Request $request)
 //    {

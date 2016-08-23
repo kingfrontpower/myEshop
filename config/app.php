@@ -106,8 +106,8 @@ return [
      */
     'providers' => [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class, //自行新增
-        
-     
+
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -139,6 +139,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class, //facebook 
     ],
     /*
       |--------------------------------------------------------------------------
@@ -172,7 +173,6 @@ return [
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
         "Cart" => Gloudemans\Shoppingcart\Facades\Cart::class, //shoppingcart 新增別名
-        
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
         'Redis' => Illuminate\Support\Facades\Redis::class,
         'Request' => Illuminate\Support\Facades\Request::class,
@@ -184,5 +184,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,//face book
+        
     ],
 ];

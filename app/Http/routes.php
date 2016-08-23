@@ -34,7 +34,10 @@ Route::post("/auth/login", "myController@auth_login");
 Route::get("/auth/logout", "myController@auth_logout");
 
 
-//Route::post("/cart/add", "myController@cart_add");
+Route::post("/cart/add", "myController@cart_add");
+Route::get("/fb_redirect", "myController@fb_redirect");
+
+Route::get("/fb_callback", "myController@fb_callback");
 
 //Route::get('/test/write2', function () {
 //    $product = new \App\Category();

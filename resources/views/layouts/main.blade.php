@@ -40,11 +40,12 @@
                         <div class="col-sm-6">
                             <div class="social-icons pull-right">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="{{url("fb_redirect")}}"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#">FB</a></li>
                                 </ul>
                             </div>
                         </div>
