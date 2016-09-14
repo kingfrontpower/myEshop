@@ -123,9 +123,13 @@ class mycontroller extends Controller {
                 'email' => Request::get('email'),
                 'password' => bcrypt(Request::get('password')),
             ]);
+        
+
+                    return redirect()->to('login')->with('message', 'Register Success！！！');
+        }else{
+            return redirect()->to('login');
         }
 
-        return redirect()->to('login');
     }
 
     public function auth_login() {
